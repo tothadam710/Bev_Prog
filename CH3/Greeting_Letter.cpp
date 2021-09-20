@@ -1,6 +1,67 @@
 #include "std_lib_facilities.h"
 
 
+
+void sex(char sex,string bro){
+
+
+	if((sex == 'm') or (sex == 'M'))
+	{
+		cout << "If you see " << bro << " please ask him to call me.\n";
+	}
+
+	else if((sex == 'f') or (sex == 'F'))
+	{
+		cout << "If you see " << bro << " please  ask her to call me.\n";
+	}
+
+
+	else
+	{
+		cout << "You must choose male or female!\n";
+	}
+
+}
+
+
+
+void expr_age(int age_of_friend){
+
+	if((age_of_friend <=0) || (age_of_friend >= 110))
+
+	{
+		
+		simple_error("You're kidding!\n");
+		
+	}
+
+	else
+
+	{
+		if(age_of_friend < 12)
+		{	
+			age_of_friend++;
+			cout <<  "Next year you will be " << age_of_friend << ".\n\n";
+		}
+		
+
+		else if(age_of_friend == 17)
+		{
+			cout << "Next year you will be able to vote.\n\n";
+		}
+
+		else if(age_of_friend > 70)
+		{
+			cout << "I hope you are enjoying the the retriement.\n\n";
+		}
+
+	}
+
+
+}
+
+
+
 int main()
 
 {	
@@ -33,57 +94,15 @@ int main()
 	cout << "Please enter " << friend_name << "'s sex.(m=male/f=female):\n";
 	cin >> friend_sex;
 
-	if((friend_sex == 'm') or (friend_sex == 'M'))
-	{
-		cout << "If you see " << friend_name << " please ask him to call me.\n";
-	}
 
-	else if((friend_sex == 'f') or (friend_sex == 'F'))
-	{
-		cout << "If you see " << friend_name << " please  ask her to call me.\n";
-	}
-
-
-	else
-	{
-		cout << "You must choose male or female!\n";
-	}
-
+	sex(friend_sex,friend_name);	
 
 	cout << "Please enter the age of the recipient:";
 	cin >> age;
 
 	cout << "If I hear you just had a birthday and you are " << age << " years old.\n\n";
 
-	if((age <=0) || (age >= 110))
-	{
-		simple_error("You're kidding!\n");
-	}
-
-	else
-
-	{
-		if(age < 12)
-		{	
-			age++;
-			cout <<  "Next year you will be " << age << ".\n\n";
-		}
-		
-
-		else if(age == 17)
-		{
-			cout << "Next year you will be able to vote.\n\n";
-		}
-
-		else if(age > 70)
-		{
-			cout << "I hope you are enjoying the the retriement.\n\n";
-		}
-
-	}
-
-
-	
+	expr_age(age);
 
 	cout << "Yours Sincenery,\n\n";
 
