@@ -185,7 +185,7 @@ double val;
 
 cout << "\n";
 cout << "Welcome to our simple calculator." << "\n";
-cout << "Please enter expressions using fl oating-point numbers.((x)=exit,(=)=print value)" << "\n";
+cout << "Please enter expressions using floating-point numbers.((x)=exit,(=)=print value)" << "\n";
 cout << "You can use(*,/,-,+,%)." << "\n";
 cout << "\n";
 
