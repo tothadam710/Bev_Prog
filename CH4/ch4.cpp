@@ -152,7 +152,7 @@ int main()
 
 	original_and_sorting(vector_1);
 
-	system("pause");
+	
 
 	return 0;
 
@@ -160,12 +160,3 @@ int main()
 }
 
 	
-
-	
-
-	
-
-
-	
-
-
