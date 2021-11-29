@@ -7,7 +7,7 @@ using namespace std;
 
  	cout <<"The elements of the array(using print_array function): [";
 
- 	for(int i = 0;i<10;++i){
+ 	for(int i = 0;i<10;i++){
  		os <<  a[i] << " ";
  	}	
 
@@ -19,11 +19,11 @@ using namespace std;
 
 
 //7.feladat
-  ostream& print_array(ostream& os,int*a,int n){
+  ostream& print_array(ostream& os,int* a,int n){
 
  	cout <<"The elements of the array(using print_array function): [";
 
- 	for(int i = 0;i<n;++i){
+ 	for(int i = 0;i<n;i++){
  		os <<  a[i] << " ";
  	}	
 
@@ -37,12 +37,12 @@ using namespace std;
  
 
 
- ostream& print_vector(ostream& os,vector<int> vec){
+ ostream& print_vector(ostream& os,vector<int>* vec){
 
  	cout <<"The elements of the vector: [";
 
- 	for(int i = 0;i<vec.size();++i){
- 		os <<  vec[i] << " ";
+ 	for(int i = 0;i<vec->size();++i){
+ 		os <<  (*vec)[i] << " ";
  	}	
 
  	 cout << "]" << endl;
@@ -55,7 +55,7 @@ using namespace std;
  
 
  void init_array(int * ar,int length){
- 	for(int i = 0;i<=length;i++){
+ 	for(int i = 0;i<length;i++){
  		
  			ar[i] = pow(2,i);		
  	}
@@ -64,7 +64,7 @@ using namespace std;
 
 
  void copy(int* first,int* second){
- 	for(int i = 0;i<=10;i++){
+ 	for(int i = 0;i<10;i++){
  		
  			first[i] = second[i];		
  	}
@@ -151,33 +151,35 @@ cout << "]" << endl;
 
 //9.feladat
 
-delete[] arr2;
-delete[] arr3;
-delete[] arr4;
+delete arr2;
+delete arr3;
+delete arr4;
 
 
 //10
 
 
-    vector<int> vektor;
+    vector<int>* vektor  = new vector<int>;
     for (int i = 100; i<110; ++i)
-        vektor.push_back(i);
+        vektor->push_back(i);
     print_vector(cout,vektor);
 
     
-    vector<int> vektor2;
+    vector<int>* vektor2 = new vector<int>;;
     for (int i = 100; i<111; ++i)
-        vektor2.push_back(i);
+        vektor2->push_back(i);
     print_vector(cout,vektor2);
 
     
-    vector<int> vektor3;
+    vector<int>* vektor3 = new vector<int>;;
     for (int i = 100; i<120; ++i)
-        vektor3.push_back(i);
+        vektor3->push_back(i);
     print_vector(cout,vektor3);
 
 
-
+    delete vektor;
+    delete vektor2;
+    delete vektor3;
 
 
 //Masodik Drill:
