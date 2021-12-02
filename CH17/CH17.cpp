@@ -37,12 +37,12 @@ using namespace std;
  
 
 
- ostream& print_vector(ostream& os,vector<int>* vec){
+ ostream& print_vector(ostream& os,vector<int> vec){
 
  	cout <<"The elements of the vector: [";
 
- 	for(int i = 0;i<vec->size();++i){
- 		os <<  (*vec)[i] << " ";
+ 	for(int i = 0;i<vec.size();++i){
+ 		os <<  vec[i] << " ";
  	}	
 
  	 cout << "]" << endl;
@@ -159,27 +159,25 @@ delete arr4;
 //10
 
 
-    vector<int>* vektor  = new vector<int>;
+    vector<int>vektor;
     for (int i = 100; i<110; ++i)
-        vektor->push_back(i);
+        vektor.push_back(i);
     print_vector(cout,vektor);
 
     
-    vector<int>* vektor2 = new vector<int>;;
+    vector<int> vektor2;
     for (int i = 100; i<111; ++i)
-        vektor2->push_back(i);
+        vektor2.push_back(i);
     print_vector(cout,vektor2);
 
     
-    vector<int>* vektor3 = new vector<int>;;
+    vector<int>vektor3;
     for (int i = 100; i<120; ++i)
-        vektor3->push_back(i);
+        vektor3.push_back(i);
     print_vector(cout,vektor3);
 
 
-    delete vektor;
-    delete vektor2;
-    delete vektor3;
+    
 
 
 //Masodik Drill:
