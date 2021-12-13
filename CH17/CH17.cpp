@@ -4,6 +4,12 @@ using namespace std;
 
 
  ostream& print_array10(ostream& os,int* a){
+	 
+    //clean from the memory garbage
+    for(int i = 0;i<10;i++){
+        a[i] = 0;
+    	}   
+	 
 
  	cout <<"The elements of the array(using print_array function): [";
 
